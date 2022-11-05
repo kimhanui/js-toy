@@ -49,10 +49,11 @@ SyntaxError: Invalid or unexpected token
 ```
 <script src="https://unpkg.com/rxjs@^7/dist/bundles/rxjs.umd.min.js"></script>
 import {fromEvent} from 'rxjs'; // es6 import 문
-const { fromEvent } = rxjs; // CDN사용시 import 문
 
+const { fromEvent } = rxjs; // <-- CDN 사용할 경우 이걸로 써야됨
 ```
 -> 두 번째 방식을 사용해야됨 (참고: https://rxjs.dev/guide/importing#v720-or-later)
 
 ## 참고 문서
 - [Decorator.md](./docs/Decorator.md) - Decorator 적용 방법 정리 문서
+- [Rxjs.md](./docs/Rxjs.md) - Rxjs 이해를 위한 문서
