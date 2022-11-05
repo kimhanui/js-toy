@@ -57,3 +57,4 @@ const { fromEvent } = rxjs; // <-- CDN 사용할 경우 이걸로 써야됨
 ## 참고 문서
 - [Decorator.md](./docs/Decorator.md) - Decorator 적용 방법 정리 문서
 - [Rxjs.md](./docs/Rxjs.md) - Rxjs 이해를 위한 문서
+  - [Rxjs 사용예제](https://junwoo45.gitbook.io/learn-rxjs-korean/learn-rxjs/recipes/catch-the-dot-game) - 읽어 볼만 한 Rxjs operator를 골라볼 수 있음.
