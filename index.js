@@ -1,0 +1,10 @@
+import {execute} from './src/ex_log.js';
+import {execute as executeLogMethod} from './src/ex_log_method.js';
+import {execute as executeReadonly} from './src/ex_readonly.js';
+import {debounce} from './src/debounce.js';
+import {executeRxjs} from './src/rxjs.js';
+// debounce(() => console.log("hi"),5000)();
+// execute();
+// executeLogMethod();
+// executeReadonly();
+executeRxjs();
