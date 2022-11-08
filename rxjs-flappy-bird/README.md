@@ -8,7 +8,7 @@
 yarn add @types/node
 yarn add typescript
 yarn add -D ts-node
-yarn add rxjs
+yarn add rxjs @reactivex/rxjs
 ```
 
 [2] typescript 프로젝트 구조 생성
@@ -19,7 +19,7 @@ $ yarn tsc --init --rootDir src --outDir ./bin --esModuleInterop --lib ES2015 --
 ```
 * --rootDir: src 하위에 ts파일들을 넣어야 됨.
 * --outDir: 컴파일된 js파일들은 ./bin 하위에 생긴다는 뜻.
-> --noImplicitAny: any라는 타입이 의도치않게 발생할 경우 에러를 띄워주는 설정. (제공된 코드는 any를 명시 안 한 부분도 있어서 안 넣을 것임. 넣으려면 `--noImplicitAny true`)
+> --noImplicitAny: any라는 타입이 의도치않게 발생할 경우 에러를 띄워주는 설정. (제공된 코드에서 any를 명시 안 한 부분도 있어서 안 넣을 것임. 넣으면 컴파일에러 남. 넣으려면 `--noImplicitAny true`)
 
 tsconfig.json 생성 후 수정
 * `strict` 옵션 주석처리
