@@ -19,8 +19,11 @@ $ yarn tsc --init --rootDir src --outDir ./bin --esModuleInterop --lib ES2015 --
 ```
 * --rootDir: src 하위에 ts파일들을 넣어야 됨.
 * --outDir: 컴파일된 js파일들은 ./bin 하위에 생긴다는 뜻.
-* --noImplicitAny: any라는 타입이 의도치않게 발생할 경우 에러를 띄워주는 설정 (제공된 코드는 any를 명시 안 하기도해서 안 넣을 것임. 넣으려면 `--noImplicitAny true`)
-* 명령어로 tsconfig.json 생성 후 `strict` 옵션도 주석처리함
+> --noImplicitAny: any라는 타입이 의도치않게 발생할 경우 에러를 띄워주는 설정. (제공된 코드는 any를 명시 안 한 부분도 있어서 안 넣을 것임. 넣으려면 `--noImplicitAny true`)
+
+tsconfig.json 생성 후 수정
+* `strict` 옵션 주석처리
+* `lib` 옵션에 `'dom'` 추가 (`document` 등의 웹 요소를 사용하려면 필수)
 
 [3] package.json에 실행 스크립트 추가
 ```
