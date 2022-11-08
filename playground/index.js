@@ -1,0 +1,12 @@
+import {execute} from './playground/src/ex_log.js';
+import {execute as executeLogMethod} from './playground/src/ex_log_method.js';
+import {execute as executeReadonly} from './playground/src/ex_readonly.js';
+import {debounce} from './playground/src/debounce.js';
+import {executeRxjs} from './playground/src/rxjs.js';
+import {execute as executeRxjsTap} from './playground/src/rxjs_tap.js';
+// debounce(() => console.log("hi"),5000)();
+// execute();
+// executeLogMethod();
+// executeReadonly();
+// executeRxjs();
+executeRxjsTap();
