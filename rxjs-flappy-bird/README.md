@@ -55,4 +55,5 @@ yarn ts-node index.ts
 
 
 ## 참고
-코드 출처: [출처](https://junwoo45.gitbook.io/learn-rxjs-korean/learn-rxjs/recipes/flappy-bird-game)
+코드 출처: [출처](https://junwoo45.gitbook.io/learn-rxjs-korean/learn-rxjs/recipes/flappy-bird-game)  
+프로젝트 실행: https://offbyone.tistory.com/445
