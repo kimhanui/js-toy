@@ -35,12 +35,14 @@ tsconfig.json 생성 후 수정
 ```
 
 ## 프로젝트 실행
-
+- yarn으로 실행
 ```
 yarn build
 yarn start
 ```
-## 프로젝트 실행(by tsc 또는 ts-node)
+
+- tsc 또는 ts-node으로 실행
+
 tsc로 ts를 js로 컴파일 해 bin폴더 안에 생기게 함.
 ```
 yarn tsc
@@ -55,6 +57,31 @@ yarn ts-node index.ts
 >
 >  `npm install --save-dev`와 `npm install {라이브러리명} -D`은 같은 명령어인데 둘 다 devDependencies에 의존성을 설치하게된다. 왜 dependencies가 아니라 devDependencies에 설치하는가?  
 -> 배포할 때 개발환경에 따라 필요한 라이브러리를 구분하기 위함. 이로써 불필요한 라이브러리를 정리할 수 있음.
+
+## 실행 오류
+[1] node index.js 실행시 `document` 못 찾는 오류
+```
+[오류]
+
+const bird$ = (0, rxjs_1.merge)((0, rxjs_1.interval)(1000), (0, rxjs_1.fromEvent)(document, 'keydown')) // 1초마다 or keydown됐을 때
+                                                                                  ^
+
+ReferenceError: document is not defined
+    at Object.<anonymous> (/Users/hnuikim-mn/Github/js-toy/rxjs-flappy-bird/bin/index.js:17:83)
+```
+-> webpack 설치 필요함.
+* 원인: `node ./bin/index.js`는 해당 경로의 스크립트만 서버에 올리는 명령이고, **브라우저**에서 벗어났기 때문에 window 나 document를 찾지 못함. 애초에 `Node` = 브라우저 없이도 사용할 수 있는 JS실행기임! 
+  <details>
+  <summary>참고 문서</summary>
+    > - Node.js 개념 참고: [링크](https://velog.io/@dev-hoon/Node.js-Node-%EA%B0%9C%EB%85%90-%EB%B0%8F-%EA%B8%B0%EB%B3%B8-%EB%AA%85%EB%A0%B9%EC%96%B4)
+    > - rxjs나 ts 설정의 문제가 아니라 js로 document를 쓰려해도 아래처럼 `document`를 못 찾는걸 볼 수 있음
+    ![](../docs/%EB%AC%B4%EC%A0%9C%203.png)
+  </details>
+* 해결: webpack 설치
+  <details>
+  <summary>참고 문서</summary>
+    > - 
+  </details>
 
 
 ## 참고
