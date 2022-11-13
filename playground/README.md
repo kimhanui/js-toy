@@ -18,6 +18,7 @@ $ npm install --save-dev @babel/plugin-proposal-decorators @babel/plugin-proposa
     ```
 
 [2] babel 설정파일 생성
+(위치: ./.babelrc)
 ```
 {
     "presets": [
