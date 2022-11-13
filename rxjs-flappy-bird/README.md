@@ -80,14 +80,18 @@ ReferenceError: document is not defined
 * 원인: `node ./dist/index.js`는 해당 경로의 스크립트만 서버에 올리는 명령이고, **브라우저**에서 벗어났기 때문에 window 나 document를 찾지 못함. 애초에 `Node.js` = 브라우저 없이도 사용할 수 있는 JS실행기임! 
   <details>
   <summary>참고 문서</summary>
+    
     - Node.js 개념 참고: [링크](https://velog.io/@dev-hoon/Node.js-Node-%EA%B0%9C%EB%85%90-%EB%B0%8F-%EA%B8%B0%EB%B3%B8-%EB%AA%85%EB%A0%B9%EC%96%B4)
+    
     - rxjs나 ts 설정의 문제가 아니라 js로 document를 쓰려해도 아래처럼 `document`를 못 찾는걸 볼 수 있음
     ![](../docs/%EB%AC%B4%EC%A0%9C%203.png)
   </details>
 * 해결: webpack 설치, 설정 파일 추가, package.json 스크립트 수정 (위 `프로젝트 생성`, `프로젝트 실행` 방법도 업데이트 완료.)
   <details>
   <summary>참고 문서</summary>
-    - webpack: js의 '모듈 기능'(Common.js, AMD, ES6에서 제공)을 모든 브라우저에서 지원하기 위한 모듈이다. webpack은 하나의 시작점(Entry point)으로부터 의존적인 모듈을 전부 찾아내서 하나의 파일로 만든다. 이 결과물을 Output이라고 한다.(이 내용은 `webpack.config.js` 파일을 보면 더 직관적으로 이해할 수 있다.)
+    
+    - `webpack`: js의 '모듈 기능'(Common.js, AMD, ES6에서 제공)을 모든 브라우저에서 지원하기 위한 모듈이다. webpack은 하나의 시작점(Entry point)으로부터 의존적인 모듈을 전부 찾아내서 하나의 파일로 만든다. 이 결과물을 Output이라고 한다.(이 내용은 `webpack.config.js` 파일을 보면 더 직관적으로 이해할 수 있다.)
+    
     - 참고 설명: [링크](https://velog.io/@ssh1997/webpack-typescript-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0)
   </details>
 
