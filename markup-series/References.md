@@ -46,3 +46,10 @@ inherit : 부모 요소의 속성값을 상속받는다.
 >   text-transform: uppercase;
 > }
 > ```
+
+### 말풍선 뾰족한 부분 만들기
+```css
+border: 15px solid;
+border-color: #000 #0000 #0000 #0000; /* 이걸로 말풍선 뾰족한 모양을 만듦. (rgba의 a(opacity) 속성 이용한 형태)*/
+```
+> opacity: 16진수로 표현.(0~F로 표현)
