@@ -1,0 +1,29 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <div class="box">
+      <button class="btn" onclick="OpenSlide()">Submit</button>
+      <div class="popup" id="popup">
+        <ion-icon name="checkmark-circle-outline"></ion-icon>
+        <h2>Thank you!</h2>
+        <p>Your details has been successfully submitted. Thanks!</p>
+        <button onclick="CloseSlide()">OK!</button>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
