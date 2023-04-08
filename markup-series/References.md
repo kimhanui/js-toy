@@ -9,6 +9,13 @@ display: flex;
 justify-content: center; //수평 정렬
 align-items: center; //수직 정렬
 ```
+또는
+```html
+position: absolute;
+left: 50%; /* 부모 요소의 width 50%만큼 오른쪽으로 띄워둠. */
+transform: translateX(-50%); /* 자기 요소의 width 50%만큼을 왼쪽으로 다시 이동함. */
+```
+- transform 주의점: 이동하기 전 요소가 있던 영역이 차지하는 부분이 완전히 사라지는 건 아니다. 다른 형제 요소들은 해당 요소가 transform 후에도 마치 이전처럼 
 
 ### px, em, rem, vh, vw단위들의 차이점
 
@@ -53,3 +60,14 @@ border: 15px solid;
 border-color: #000 #0000 #0000 #0000; /* 이걸로 말풍선 뾰족한 모양을 만듦. (rgba의 a(opacity) 속성 이용한 형태)*/
 ```
 > opacity: 16진수로 표현.(0~F로 표현)
+
+
+## [3. sidebar](./3_sidebar/)
+자료: [youtube](https://www.youtube.com/watch?v=bFvfqUMjvsA)
+
+### `<nav></nav>` 태그를 쓰는 이유?
+태그 의미: 웹 내 navigation 역할을 함. 보통 메뉴, 목차, 인덱스 등에 사용됨. **스크린 리더기 같은 브라우저는 <nav> 를 이용해 해당 콘텐츠의 초기 렌더링을 생략할지 여부를 결정함**. 즉, 스크린리더를 사용할 경우 tab, 방향키 등을 사용해 페이지에서 원하는 정보를 얻을 수 있는데 이때, 네비게이션 영역에 해당하는 다소 불필요한 정보들은 건너뛰는 기능(스킵 네이게이션이라 함)을 위해 <nav> 태그를 사용한다는 뜻.
+
+> 시멘틱 태그: 의미를 부여한 태그. div 이용해도 되지만, 굳이 header, footer를 쓰는 이유는 (1)문서의 가독성이 좋아지고 유지보수가 쉬워지기 때문. (목적별 의미 부여) (2) SEO에도 좋다. (검색 용이) (3)**또 이게 시각장애인들이 사이트를 이용할 때 화면의 텍스트를 읽어주는 스크린 리더기 등을 통해 활용될 수 있음.(웹 접근성 확보)**
+
+> 웹 접근성 향상시키기에 참고하기 좋은 글 : https://web-for-all.tistory.com/3
