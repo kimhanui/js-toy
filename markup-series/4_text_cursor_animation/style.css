@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+  --body-color : #010333;
+  --first-text-color : #FFF;
+  --sec-text-color : #4070F4;
+}
+
+body{
+  min-height: 100vh;
+  background: var(--body-color);
+  display: flex;
+  justify-content: center;
+  align-items: center; /* height를 정해줘야 수직 align 됨. */
+}
+
+.container{
+
+}
+
+.container .text{
+  position: relative;
+  color:  var(--sec-text-color);
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.container .first-text{
+  color: var(--first-text-color);
+}
+
+.container .sec-text::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--body-color);
+  /* background: red; */
+  border-left: 2px solid;
+  animation: cursor-move 4s steps(12) infinite;
+}
+
+@keyframes cursor-move{
+  40%, 60%{ /* 의미:12초의 duration 중 해당 시간대까지 left:100%로 움직임&유지함. 
+          - 후반 시간대로 지정될 수록 커서가 left: 0%로 돌아오는 속도가 빨라짐. (단시간에 돌아와야하니까)
+          - 40%나 60%로만 쓰면 커서가 left:100%까지 간 후 잠깐 멈추지 않음.
+          - ** 여기선 40%에서 이미 left:100%이고, 40%~60%까지 멈췄다가, 60%시점에 다시 left:0%로 돌아감 */
+    left: 100%;
+  }
+  100%{
+    left: 0%; /* duration의 마지막이 되면 현재 커서가 어느 위치에 있든 left; 0%를 달성해야함 */
+  }
+}

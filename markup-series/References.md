@@ -97,3 +97,17 @@ Preview
     > 애니메이션 효과를 주는건아니라서, 애니메이션 효과를 같이 주려면 transition과 함께 사용하면 된다.
 - animation: 요소에 애니메이션 효과를 적용시켜 준다. 키워드 `@keyframes`를 사용해 시간에 따른 효과를 정의할 수 있다.
     > transition과 차이점: transition은 요소가 로드되자마자 바로 발동되는게 아님. 요소 속성 값이 변화할 때 반응한다. 반면 animation은 요소의 **재생,정지,반복**을 포함한 세부 흐름을 시간 단위로 설정할 수 있다.
+
+
+
+## [4. sidebar](./4_text_cursor_animation/)
+자료: [youtube](https://www.youtube.com/watch?v=nxoHR9lltK0)
+
+preview
+
+![image](./static/text_cursor.gif)
+
+### overflow:hidden
+- overflow: 주어진 공간이 모자라 넘치는 컨텐츠를 어떻게 보여줄지 결정. 
+    - `visible`(기본) : 공간을 넘어가 컨텐츠를 다 보여줌
+    - `hidden` : 주어진 공간내에 담을 수 있는 양만 보여줌
