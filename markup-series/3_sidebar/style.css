@@ -109,7 +109,8 @@ body.dark{
 header .image-text .header-text{
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(90deg, #5a9ad3 0%, #bc70ff 100%)
+  /* 애플 공홈 글씨 데코 gradient 훔쳐봄. */
+  /* background-image: linear-gradient(90deg, #5a9ad3 0%, #bc70ff 100%, var(--copy-color) 200%) */
 }
 
 .header-text .name{
