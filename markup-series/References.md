@@ -33,8 +33,8 @@ transform: translateX(-50%); /* 자기 요소의 width 50%만큼을 왼쪽으로
 상대 길이 단위. (요소 크기)  
 반응형 웹을 만든다고 했을 때 `%`단위만 사용하는 건 한계가 있다. 이때 vw, vh가 쓰인다.  
 vw, vh는 viewport 크기의 1/100 단위임. (ex. 브라우저 창 높이가 700px일 때 1vh=7px)
-- vw: vertical height의 약자.
-- vh: vertical width의 약자.
+- vh: vertical height의 약자.
+- vw: vertical width의 약자.
 
 ## [2. tooltip](./2_tooltip/)
 자료: [youtube](https://www.youtube.com/watch?v=qdiUrCnuCjI&t)
@@ -44,9 +44,10 @@ Preview
 
 ### box-sizing
 `box-sizing: content-box | border-box | initial | inherit`
-content-box : 콘텐트 영역을 기준으로 크기를 정한다.
-border-box : 테두리를 기준으로 크기를 정한다.(테두리포함)
-initial : 기본값으로 설정한다.
+
+content-box : 콘텐트 영역을 기준으로 크기를 정한다.  
+border-box : 테두리를 기준으로 크기를 정한다.(테두리포함)  
+initial : 기본값으로 설정한다.  
 inherit : 부모 요소의 속성값을 상속받는다.
 
 ### ::before
@@ -100,7 +101,7 @@ Preview
 
 
 
-## [4. sidebar](./4_text_cursor_animation/)
+## [4. cursor animation](./4_text_cursor_animation/)
 자료: [youtube](https://www.youtube.com/watch?v=nxoHR9lltK0)
 
 preview
